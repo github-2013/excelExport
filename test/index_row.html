@@ -11,33 +11,33 @@
 <button type="button" onclick="handleExport()">导出</button>
 <script src="../dist/index.umd.js"></script>
 <script>
-    const xlsxColumData = [
+    const xlsxData = [
         {
             "sheetName": "presdient_of_birthday",
             "sheetData": [
                 {
-                    "name": "George Washington"
+                    "name1": "George Washington"
                 },
                 {
-                    "name": "John Adams",
+                    "name2": "John Adams",
                 },
                 {
-                    "name": "John Adams",
+                    "name3": "John Adams",
                 },
                 {
-                    "name": "Thomas Jefferson",
+                    "name4": "Thomas Jefferson",
                 },
                 {
-                    "name": "Aaron Burr",
+                    "name5": "Aaron Burr",
                 }
             ]
         }
     ]
     function handleExport() {
-        json2excel.default({
+        json2excel({
             fileName: 'presdient_birthday.xlsx',
-            data: xlsxColumData,
-            direction: 0
+            data: xlsxData,
+            direction: 1
         })
     }
 </script>

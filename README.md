@@ -8,46 +8,107 @@
 
 #### Install
 ```
-npm install @nepoch/json2excel
+npm install json2excel_convert
 ```
 
 #### Examples
 ##### esm环境
 ```
-开发中...
+import json2excel from 'json2excel_convert'
+
+const xlsxData = [
+    {
+        "sheetName": "presdient_of_birthday",
+        "sheetData": [
+            {
+                "name": "George Washington"
+            },
+            {
+                "name": "John Adams",
+            },
+            {
+                "name": "John Adams",
+            },
+            {
+                "name": "Thomas Jefferson",
+            },
+            {
+                "name": "Aaron Burr",
+            }
+        ]
+    }
+]
+function handleExport() {
+    json2excel({
+        fileName: 'presdient_birthday.xlsx',
+        data: xlsxData,
+        direction: 0 //纵向导出
+    })
+}
 ```
-##### esm环境
+##### cjs环境
 ```
-开发中...
+const json2excel = require('json2excel_convert')
+const xlsxData = [
+    {
+        "sheetName": "presdient_of_birthday",
+        "sheetData": [
+            {
+                "name": "George Washington"
+            },
+            {
+                "name": "John Adams",
+            },
+            {
+                "name": "John Adams",
+            },
+            {
+                "name": "Thomas Jefferson",
+            },
+            {
+                "name": "Aaron Burr",
+            }
+        ]
+    }
+]
+
+json2excel({
+    fileName: 'presdient_birthday.xlsx',
+    data: xlsxData,
+    direction: 0 //纵向导出
+})
 ```
 ##### umd环境
 ```
-var jexcel=require('json2excel');
- 
-var data = {
-    sheets: [{
-        header: {
-            'author': 'authorName',
-            'title': 'title'
-        },
-        items: [
-         {
-            author:'john',
-            title:'how to use this'
-         },
-         {
-            author:'Bob',
-            title:'so Easy'
-         }
-        ],
-        sheetName: 'sheet1',
-    }],
-    filepath: 'j2x.xlsx'
-} 
- 
-jexcel.j2e(data,function(err){ 
-    console.log('finish')
-});
+const xlsxData = [
+    {
+        "sheetName": "presdient_of_birthday",
+        "sheetData": [
+            {
+                "name": "George Washington"
+            },
+            {
+                "name": "John Adams",
+            },
+            {
+                "name": "John Adams",
+            },
+            {
+                "name": "Thomas Jefferson",
+            },
+            {
+                "name": "Aaron Burr",
+            }
+        ]
+    }
+]
+function handleExport() {
+    json2excel({
+        fileName: 'presdient_birthday.xlsx',
+        data: xlsxData,
+        direction: 0 //纵向导出
+    })
+}
 ```
 #### 效果
 1. 纵向导出

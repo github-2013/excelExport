@@ -2,7 +2,7 @@ declare enum Direction {
     Row = 0,
     Column = 1
 }
-type Json2ExcelProp = {
+export type Json2ExcelProp = {
     data: [
         {
             sheetName: string;
