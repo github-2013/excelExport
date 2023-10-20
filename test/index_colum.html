@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<h1>json2excel</h1>
+<button type="button" onclick="handleExport()">导出</button>
+<script src="../dist/index.umd.js"></script>
+<script>
+    const xlsxData = [
+        {
+            "sheetName": "presdient_of_birthday",
+            "sheetData": [
+                {
+                    "name1": "George Washington"
+                },
+                {
+                    "name2": "John Adams",
+                },
+                {
+                    "name3": "John Adams",
+                },
+                {
+                    "name4": "Thomas Jefferson",
+                },
+                {
+                    "name5": "Aaron Burr",
+                }
+            ]
+        }
+    ]
+    function handleExport() {
+        json2excel({
+            fileName: 'presdient_birthday.xlsx',
+            data: xlsxData,
+            direction: 0
+        })
+    }
+</script>
+<body>
+
+</body>
+</html>

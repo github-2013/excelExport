@@ -1,0 +1,50 @@
+{
+  "name": "@nepoch/json2excel",
+  "version": "0.0.1",
+  "description": "将json数据导出为excel",
+  "files": ["dist"],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "umd": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "start": "rollup -c rollup.config.mjs -w",
+    "build": "rollup -c rollup.config.mjs --environment ENV:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github-2013/excelExport.git"
+  },
+  "keywords": [
+    "excel",
+    "typescript",
+    "json2excel",
+    "json",
+    "xlsx"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github-2013/excelExport/issues"
+  },
+  "homepage": "https://github.com/github-2013/excelExport#readme",
+  "dependencies": {
+    "xlsx": "0.18.5"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.23.2",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-commonjs": "25.0.5",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-terser": "0.4.4",
+    "@rollup/plugin-typescript": "11.1.5",
+    "@types/jest": "29.5.5",
+    "jest": "29.7.0",
+    "rollup": "4.0.2",
+    "rollup-plugin-livereload": "2.0.5",
+    "rollup-plugin-serve": "2.0.2",
+    "tslib": "2.6.2",
+    "typescript": "5.2.2"
+  }
+}
