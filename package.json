@@ -1,5 +1,5 @@
 {
-  "name": "@nepoch/json2excel",
+  "name": "json2excel",
   "version": "0.0.1",
   "description": "将json数据导出为excel",
   "files": ["dist"],
