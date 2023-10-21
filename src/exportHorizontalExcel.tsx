@@ -13,7 +13,7 @@ export function horizontalExport(props: Json2ExcelProp) {
         if (item.sheetName.length >= 31) {
             utils.book_append_sheet(workbook, worksheet, `${item.sheetName.substr(0, 28)}...`);
         } else {
-            utils.book_append_sheet(workbook, worksheet, 'test');
+            utils.book_append_sheet(workbook, worksheet, item.sheetName);
         }
     })
     //
