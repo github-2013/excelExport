@@ -1,6 +1,6 @@
 {
   "name": "json2excel_convert",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "将json数据导出为excel",
   "files": ["dist"],
   "main": "dist/index.cjs.js",

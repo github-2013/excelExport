@@ -4,9 +4,9 @@ import {utils, writeFileXLSX} from "xlsx";
 export function horizontalExport(props: Json2ExcelProp) {
     // 工作薄
     const workbook = utils.book_new();
-    props.data.forEach(item => {
+    props.data.forEach((item, index) => {
         // 工作表
-        const worksheet = utils.json_to_sheet(item.sheetData);
+        const worksheet = utils.json_to_sheet([item.sheetData.map(item => Object.values(item)[0])]);
         // 头部标题
         utils.sheet_add_aoa(worksheet, [item.sheetData.map(item => Object.keys(item)[0])], { origin: 'A1' });
         // 增加工作表
